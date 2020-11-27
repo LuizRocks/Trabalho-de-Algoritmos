@@ -730,6 +730,171 @@ int Excluir(){
   return 1;
 }
 
+void ExcluirMes(){
+
+
+  int mes, i, j = 0;
+
+  char ano[4], anomes[20], janeiro[12]= "janeiro.html", fevereiro[14] = "fevereiro.html", marco[10]="marco.html", abril[10] = "abril.html", maio[9] = "maio.html", junho[10] = "junho.html", julho[10] = "julho.html", agosto[11] = "agosto.html", setembro[13] = "setembro.html", outubro[12] = "outubro.html", novembro[13] = "novembro.html", dezembro[13] = "dezembro.html", html[5] = ".html";
+
+  printf("Digite o ano : ");
+  scanf("%s", ano);
+
+  printf("Digite o mes que deseja excluir: ");
+  scanf("%d", &mes);
+
+  char ano2[9];
+
+
+  if(mes == 1){
+    int j = 0;
+    char anomes[16];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+    for(int i = 4; i < 17; i++){
+      anomes[i] = janeiro[j];
+      j++;
+    }
+    remove(anomes);
+  }
+  if(mes == 2){
+    int j = 0;
+    char anomes[18];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+    for(int i = 4; i < 18; i++){
+      anomes[i] = fevereiro[j];
+      j++;
+    }
+    remove(anomes);
+  }
+  if(mes == 3){
+    int j = 0;
+    char anomes[14];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+    for(int i = 4; i < 14; i++){
+      anomes[i] = marco[j];
+      j++;
+    }
+    remove(anomes);
+  }
+  if(mes == 4){
+    int j = 0;
+    char anomes[14];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+
+    for(int i = 4; i < 14; i++){
+      anomes[i] = abril[j];
+      j++;
+    }
+    remove(anomes);
+  }
+  if(mes == 5){
+    int j = 0;
+    char anomes[13];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+    for(int i = 4; i < 13; i++){
+      anomes[i] = maio[j];
+      j++;
+    }
+    remove(anomes);
+  }
+  if(mes == 6){
+    int j = 0;
+    char anomes[14];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+    for(int i = 4; i < 14; i++){
+      anomes[i] = junho[j];
+      j++;
+    }
+    remove(anomes);
+  }
+  if(mes == 7){
+    int j = 0;
+    char anomes[14];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+    for(int i = 4; i < 14; i++){
+      anomes[i] = julho[j];
+      j++;
+    }
+    remove(anomes);
+  }
+  if(mes == 8){
+    int j = 0;
+    char anomes[15];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+    for(int i = 4; i < 15; i++){
+      anomes[i] = agosto[j];
+      j++;
+    }
+    remove(anomes);
+  }
+  if(mes == 9){
+    int j = 0;
+    char anomes[17];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+    for(int i = 4; i < 17; i++){
+      anomes[i] = setembro[j];
+      j++;
+    }
+    remove(anomes);
+  }
+  if(mes == 10){
+    int j = 0;
+    char anomes[16];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+    for(int i = 4; i < 16; i++){
+      anomes[i] = outubro[j];
+      j++;
+    }
+    remove(anomes);
+  }
+  if(mes == 11){
+    int j = 0;
+    char anomes[17];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+    for(int i = 4; i < 17; i++){
+      anomes[i] = novembro[j];
+      j++;
+    }
+    remove(anomes);
+  }
+
+  if(mes == 12){
+    int j = 0;
+    char anomes[17];
+    for(int i = 0; i < 4; i++){
+      anomes[i] = ano[i];
+    }
+    for(int i = 4; i < 17; i++){
+      anomes[i] = dezembro[j];
+      j++;
+
+    }
+    remove(anomes);
+  }
+
+}
 int main(){
 int x = 0; 
 int i=1;
