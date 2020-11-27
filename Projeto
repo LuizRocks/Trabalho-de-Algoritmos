@@ -1,1 +1,299 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+int NovoRegistro(){
+
+struct registrar{
+float valor;
+char descriçao[40], ano[4];
+int dia,mes;
+char tipo[10];
+char categoria[100];
+};
+
+struct registrar reg;
+
+int dia, mes;
+
+char janeiro[12]= "janeiro.html", fevereiro[14] = "fevereiro.html", marco[10]="marco.html", abril[10] = "abril.html", maio[9] = "maio.html", junho[10] = "junho.html", julho[10] = "julho.html", agosto[11] = "agosto.html", setembro[13] = "setembro.html", outubro[12] = "outubro.html", novembro[13] = "novembro.html", dezembro[13] = "dezembro.html";
+
+printf("\n\n\n************** Novo Registro **************\n\n");
+printf("Valor:");
+scanf("%f",&reg.valor);
+
+printf("<=========== digite a data ===========>\n");
+printf("Digite o dia(--):");
+scanf("%d",&dia);
+printf("Digite o número correspondente ao mês: \n 1- Janeiro \n 2- Fevereiro \n 3- Março \n 4- Abril \n 5- Maio \n 6- Junho \n 7- Julho \n 8- Agosto \n 9- Setembro \n 10- Outubro \n 11- Novembro \n 12- Dezembro\n");
+scanf("%d",&mes);
+printf("Digite o ano(----):");
+scanf("%s",reg.ano);
+printf("Digite a descrição (só 1 palavra):");
+scanf("%s",reg.descriçao);
+printf("Digite a categoria(Comida,Viagem,etc...):\n");
+scanf("%s", reg.categoria);
+printf("Digite (Receita ou Gasto): ");
+scanf("%s", reg.tipo);
+
+FILE*arquivo;
+arquivo=fopen(reg.ano, "a");
+fprintf(arquivo,"\n************** Registro **************\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+fclose(arquivo);
+
+printf("Novo Registro Criado!\n\n\n\n\n\n");
+
+
+
+
+if(mes == 1){
+  int j = 0;
+  char anomes[16];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 16; i++){
+    anomes[i] = janeiro[j];
+    j++;
+  }
+
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+if(mes == 2){
+  int j = 0;
+  char anomes[18];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 18; i++){
+    anomes[i] = fevereiro[j];
+    j++;
+  }
+  
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+if(mes == 3){
+  int j = 0;
+  char anomes[14];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 14; i++){
+    anomes[i] = marco[j];
+    j++;
+  }
+  
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+if(mes == 4){
+  int j = 0;
+  char anomes[14];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 14; i++){
+    anomes[i] = abril[j];
+    j++;
+  }
+  
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+if(mes == 5){
+  int j = 0;
+  char anomes[13];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 13; i++){
+    anomes[i] = maio[j];
+    j++;
+  }
+  
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+if(mes == 6){
+  int j = 0;
+  char anomes[14];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 14; i++){
+    anomes[i] = junho[j];
+    j++;
+  }
+  
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+if(mes == 7){
+  int j = 0;
+  char anomes[14];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 14; i++){
+    anomes[i] = julho[j];
+    j++;
+  }
+  
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+if(mes == 8){
+  int j = 0;
+  char anomes[15];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 15; i++){
+    anomes[i] = agosto[j];
+    j++;
+  }
+  
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+if(mes == 9){
+  int j = 0;
+  char anomes[17];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 17; i++){
+    anomes[i] = setembro[j];
+    j++;
+  }
+  
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+
+
+if(mes == 10){
+  int j = 0;
+  char anomes[16];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 16; i++){
+    anomes[i] = outubro[j];
+    j++;
+  }
+  
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+if(mes == 11){
+  int j = 0;
+  char anomes[17];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 17; i++){
+    anomes[i] = novembro[j];
+    j++;
+  }
+  
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+if(mes == 12){
+  int j = 0;
+  char anomes[17];
+  for(int i = 0; i < 4; i++){
+    anomes[i] = reg.ano[i];
+  }
+  for(int i = 4; i < 17; i++){
+    anomes[i] = dezembro[j];
+    j++;
+  }
+  
+  FILE*arquivo2;
+  arquivo2=fopen(anomes, "a");
+  fprintf(arquivo2,"\n\n\n************** Novo Registro **************\n\nTipo: %s \nCategoria: %s \nValor:%.2f \n%d / %d / %s \nDescriçao:%s\n\n\n",reg.tipo, reg.categoria,reg.valor,dia,mes,reg.ano,reg.descriçao);
+  fclose(arquivo2);
+  }
+
+return 0;
+}
+
+while(i == 1){
+  
+  printf("____________ MENU ____________\n");
+  printf("1- Novo Registro \n");
+  printf("2 - Relatório anual \n");
+  printf("3 - Relatório mensal \n");
+  printf("4 - Excluir Ano \n");
+  printf("5 - Excluir mes especifico do ano \n");
+  printf("0- Sair \n");
+  printf("Escolha Uma Opção: ");
+  printf("\n__________________________\n");
+  scanf("%d", &x);
+
+  if(x == 0){
+    printf("Saindo!");
+    break;
+  }
+
+  else if(x == 1){
+
+  NovoRegistro();
+  }
+
+  else if(x==2){
+    Relatorio();
+
+  }
+  else if(x==3){
+    RelatorioMensal();
+
+  }
+  else if(x==4){
+    Excluir();
+
+  }
+  else if(x==5){
+    ExcluirMes();
+
+  }
+}
+return 0;
+}
